@@ -13,15 +13,9 @@ useEffect( () => {
     setCounterState(prevCounter => prevCounter + 1);
   }, 1000);
 
-  let timeout = setTimeout(() => {
-    clearInterval(interval);
-    console.log('Intervalo detenido!');
-  }, 15000);
-
-
   return () => {
     clearInterval(interval);
-    clearTimeout(timeout);
+    
   };
 }, [])
 
